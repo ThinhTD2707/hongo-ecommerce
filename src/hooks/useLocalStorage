@@ -1,0 +1,26 @@
+const useLocalStorage = () => {
+    const setLocalStorage = (name, value) => {
+        try {
+            localStorage.setItem(key, JSON.stringify(value));
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    const getLocalStorage = (key) => {
+        const value = localStorage.getItem(key);
+        return value ? JSON.parse(value) : null;
+    };
+
+    const removeLocalStorage = (key) => {
+        try {
+            localStorage.removeItem(key);
+        } catch (error) {
+            console.error(`Error removing key "${key}":`, error);
+        }
+    };
+
+    return { setLocalStorage, getLocalStorage, removeLocalStorage };
+};
+
+export default useLocalStorage;

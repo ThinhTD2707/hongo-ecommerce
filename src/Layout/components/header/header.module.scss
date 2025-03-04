@@ -1,0 +1,118 @@
+.header {
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.left,
+.center,
+.right {
+    height: 70px; /* Adjust height as needed */
+}
+
+.left {
+    // background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .logo {
+        max-height: 24px;
+    }
+}
+
+.center {
+    // background-color: lightgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.center-list {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+}
+.center-item {
+    display: flex;
+    align-items: center;
+    a {
+        margin: 18px 20px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #232323;
+        position: relative;
+        text-decoration: none;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -1px;
+            left: 0;
+            background-color: #232323;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover:before {
+            visibility: visible;
+            width: 100%;
+        }
+    }
+    i {
+        content: '';
+    }
+}
+
+.right {
+    // background-color: lightcoral;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right-wraper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    height: inherit;
+}
+.right-item {
+    display: flex;
+    height: inherit;
+    align-items: center;
+    margin-left: 14px;
+    cursor: pointer;
+
+    a {
+        width: 16px;
+        height: 16px;
+        img {
+        }
+    }
+}
+.minicart {
+    position: absolute;
+    top: 100%;
+    right: 5px;
+    z-index: 999;
+    display: none;
+}
+.cart-btn {
+    &:hover {
+        .minicart {
+            display: block;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .header {
+        grid-template-columns: 4fr 0fr 8fr;
+    }
+    .center-list {
+        display: none;
+    }
+    .right-wraper {
+        justify-content: flex-end;
+    }
+}

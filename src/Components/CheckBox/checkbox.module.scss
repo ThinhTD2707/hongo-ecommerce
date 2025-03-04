@@ -1,0 +1,70 @@
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+
+    cursor: pointer;
+
+    &.disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+
+    .radio-input {
+        // width: 15px;
+        // height: 15px;
+        // border: 2px solid #ccc;
+        // border-radius: 50%;
+        // appearance: none;
+        // outline: none;
+        transition: all 0.2s ease;
+
+        &:checked {
+            border-color: #007bff;
+            background-color: #007bff;
+        }
+
+        &:focus-visible {
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+        }
+
+        &:disabled {
+            background-color: #f8f9fa;
+        }
+    }
+
+    .radio-label {
+        font-size: 14px;
+        color: #808080;
+        font-weight: 400;
+        &.disabled {
+            color: #999;
+        }
+    }
+}
+.payment-detail {
+    position: relative;
+    box-sizing: border-box;
+    font-size: 13px;
+    color: #515151;
+    line-height: 1.5;
+    padding: 20px 25px;
+    margin: 1em 0;
+    background-color: #f5f5f5;
+
+    form {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+
+        &.expanded {
+            height: 0px; // Adjust this value based on your form's content
+        }
+    }
+}

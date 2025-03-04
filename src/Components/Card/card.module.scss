@@ -1,0 +1,89 @@
+.card {
+    display: block;
+    cursor: pointer;
+    .card_a {
+        opacity: 1;
+        position: absolute;
+    }
+    &:hover {
+        .card_a {
+            opacity: 0;
+            position: absolute;
+        }
+        .card-button {
+            opacity: 1;
+            -webkit-transition: all 0.2s ease-in-out;
+            z-index: 999;
+        }
+    }
+}
+
+.card_body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+.card_img {
+    -webkit-transition: all 0.5s ease-in-out;
+}
+.card-button {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        vertical-align: middle;
+        padding: 0;
+        border: 0;
+        border-right: 1px solid rgba(215, 215, 215, 0.15);
+        width: 100%;
+        height: 35px;
+        background-color: #1b1b1b;
+        overflow: hidden;
+    }
+}
+.card-icon {
+    width: 16px;
+    height: 16px;
+    filter: invert(1);
+}
+
+.card_content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.card_name {
+    font-size: 15px;
+    line-height: 18px;
+    color: #232323;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limits the text to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    // height: 36px; khong biet co ngon khong nhin hoi ki`
+    &:hover {
+        color: pink;
+    }
+}
+.card_price {
+    font-size: 14px;
+    line-height: 16px;
+    color: #808080;
+    font-weight: 400;
+}

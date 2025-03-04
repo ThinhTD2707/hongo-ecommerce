@@ -1,0 +1,92 @@
+.checkout-container {
+    display: grid;
+    padding: 30px 50px;
+    grid-template-columns: 7fr 5fr;
+}
+.checkout-title {
+    font-size: 20px;
+    list-style: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.checkout-product {
+    font-size: 14px;
+    width: 100%;
+
+    .checkout-name {
+        width: 55%;
+    }
+}
+.price {
+    font-size: 22px;
+    font-weight: 600;
+    color: #232323;
+    line-height: 23px;
+    margin-bottom: 7px;
+}
+.bill-container {
+    text-align: left;
+    flex: 1;
+    .bill-form {
+        margin-right: 40px;
+        .first-form {
+            width: 47%;
+            overflow: visible;
+        }
+        .bill-firstname {
+            float: left;
+        }
+        .bill-lastname {
+            float: right;
+        }
+        .bill-companyname {
+            width: 100%;
+            clear: both;
+        }
+    }
+}
+.checkout-sidebar {
+    min-width: 360px;
+    background-color: #f2f2f2;
+    padding: 20px 30px;
+    text-align: left;
+}
+
+.checkout-payment {
+    background-color: #fff;
+    border: none;
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    .payment-radio {
+        position: relative;
+        display: block;
+    }
+}
+.checkout-place-order {
+    font-size: 13px;
+    .title {
+        color: #808080;
+        font-weight: 400;
+        margin-bottom: 15px;
+    }
+}
+.order-btn {
+    margin: 30px 0;
+}
+.checkout-alert {
+    padding: 13px 20px 12px 34px;
+    margin: 0 0 2em;
+    outline: none;
+    background-color: #4278bb;
+    color: #fff;
+    font-size: 13px;
+    word-wrap: break-word;
+}
+@media (max-width: 770px) {
+    .checkout-container {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+    }
+}

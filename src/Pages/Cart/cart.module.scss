@@ -1,0 +1,188 @@
+.cart {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 20px;
+    gap: 40px;
+}
+.cart-content {
+    flex: 1;
+}
+.quantity {
+    display: inline-block;
+    position: relative;
+    .quantity-input {
+        display: block;
+        width: 40px;
+        min-height: 40px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 500;
+        color: #767676;
+        padding: 0px 25px 0px 0px;
+        outline: none;
+        border: 1px solid #e8e8e8;
+    }
+    .quantity-btn {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        top: 0;
+        height: 100%;
+        button {
+            padding: 0px 7px;
+            background-color: transparent;
+            height: 100%;
+            border: 1px solid #e8e8e8;
+            cursor: pointer;
+        }
+    }
+}
+.product-remove {
+    box-sizing: border-box;
+    width: 25px;
+    padding: 5px 7px 5px 0;
+    text-align: center !important;
+    &:hover {
+        a {
+            cursor: pointer;
+            color: red;
+        }
+    }
+}
+.cart-table {
+    width: 100%;
+    border-spacing: 0;
+    th,
+    td {
+        border-bottom: 1px solid #e8e8e8;
+    }
+}
+tbody {
+    font-size: 14px;
+    line-height: 24px;
+    color: #808080;
+    font-weight: normal;
+    word-wrap: break-word;
+}
+.table-title {
+    th {
+        border-top: none;
+        color: #232323;
+        font-size: 13px;
+        font-weight: 500;
+        text-align: left;
+        padding: 10px 8px;
+    }
+}
+.table-content {
+    td {
+        text-align: left;
+        padding: 10px 8px;
+    }
+}
+.table-footer {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    .coupon {
+        display: block;
+        float: left;
+        border-bottom: 1px solid #e8e8e8;
+
+        input {
+            position: relative;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 22px;
+            border: 0;
+            padding: 12px 20px 10px 35px;
+            background-image: url('https://hongo.themezaa.com/wp-content/themes/hongo/assets/images/coupon-code-icon.png');
+            background-repeat: no-repeat;
+            background-size: 14px;
+            background-position: center left 5px;
+        }
+        button {
+            border: 0;
+            background-color: transparent;
+            font-size: 13px;
+        }
+    }
+    .cart-footer-btn {
+        float: right;
+        font-size: 13px;
+        color: #232323;
+        text-transform: capitalize;
+        border: none;
+        padding: 0;
+        padding-bottom: 3px;
+        border-bottom: 2px solid #232323;
+        margin-left: 30px;
+        background-color: transparent !important;
+        position: relative;
+        top: 10px;
+        cursor: pointer;
+    }
+}
+.product-thumnail {
+    width: 110px;
+    min-width: 35px;
+    padding: 25px 8px;
+
+    img {
+        width: 80px;
+    }
+}
+.cart-checkout {
+    // width: 100%;
+    text-align: left;
+    background-color: #f5f5f5;
+    padding: 15px 30px;
+}
+.checkout-tittle {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 21px;
+    margin-bottom: 10px;
+}
+.checkout-table {
+    text-align: left;
+    border-spacing: 0;
+    width: 100%;
+    th {
+        width: 120px;
+        color: #232323;
+        vertical-align: top;
+        padding: 20px 8px 20px 0;
+        border-bottom: 1px solid #e8e8e8;
+    }
+    td {
+        padding: 20px 0px 20px 8px;
+        border-bottom: 1px solid #e8e8e8;
+    }
+
+    .checkout-shipping {
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            input {
+                margin: 0;
+                padding: 0;
+            }
+            label {
+                position: absolute;
+                top: -1px;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+.cart-btn {
+    margin-top: 20px;
+}
+@media (max-width: 990px) {
+    .cart-checkout {
+        width: 100%;
+    }
+}
