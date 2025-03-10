@@ -23,6 +23,31 @@
 .content-main {
     width: calc(82.4% - 15px);
 }
+.content-img-main {
+    position: relative;
+    .main-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        // object-position: 0 0;
+    }
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        display: var(--display);
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-color: black;
+        // background-image: var(--url);
+        background-image: url(https://hongo.themezaa.com/wp-content/uploads/2019/04/fashion-classic-products-11.jpg.webp);
+        background-size: 150%;
+        background-position: var(--zom-x) var(--zom-y);
+        cursor: crosshair;
+    }
+}
 .content-desc {
     flex-basis: 70%;
     display: flex;

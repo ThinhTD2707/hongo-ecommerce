@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import classNames from 'classnames/bind';
 import styles from './detail.module.scss';
 import Card from '../../Components/Card/index';
-import img from '../../asset/card/blog-listing-img106-578x771.jpg.webp';
 import { useParams } from 'react-router-dom';
 import dataProduct from '../../data/Product';
 const cx = classNames.bind(styles);
 function Detail() {
+    const mainImgRef = useRef(null);
     const [tabs, setTabs] = React.useState(0);
     const [item, setItem] = React.useState();
     const { id } = useParams();
@@ -14,6 +14,37 @@ function Detail() {
     useEffect(() => {
         const findProduct = dataProduct.find((product) => product.id === id);
         setItem(findProduct);
+    }, [id]);
+
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            const rect = mainImgRef.current.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+            document.documentElement.style.setProperty('--display', 'block');
+            document.documentElement.style.setProperty('--zom-x', `${x}%`);
+            document.documentElement.style.setProperty('--zom-y', `${y}%`);
+        };
+        const handleMouseOut = () => {
+            document.documentElement.style.setProperty('--display', 'none');
+            document.documentElement.style.setProperty('--zom-x', '50%');
+            document.documentElement.style.setProperty('--zom-y', '50%');
+        };
+
+        const mainElement = mainImgRef.current;
+
+        if (mainElement) {
+            mainElement.addEventListener('mousemove', handleMouseMove);
+            mainElement.addEventListener('mouseout', handleMouseOut);
+        }
+
+        return () => {
+            if (mainElement) {
+                mainElement.removeEventListener('mousemove', handleMouseMove);
+                mainElement.removeEventListener('mouseout', handleMouseOut);
+            }
+        };
     }, []);
 
     return (
@@ -25,8 +56,13 @@ function Detail() {
                             <img src={img} alt="img" />
                         ))}
                     </div>
-                    <div className={cx('content-main')}>
-                        <img src={item?.images?.mainImg} alt="img" />
+                    {/* main image */}
+                    <div
+                        style={{ '--url': `url(${item?.images?.mainImg})` }}
+                        className={cx('content-img-main')}
+                        ref={mainImgRef}
+                    >
+                        <img className={cx('main-img')} src={item?.images?.mainImg} alt="img" />
                     </div>
                 </div>
                 <div className={cx('content-desc')}>
