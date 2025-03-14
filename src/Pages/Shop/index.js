@@ -3,6 +3,7 @@ import classNames from 'classnames/bind';
 import styles from './shop.module.scss';
 import shopBanner from '../../asset/shop/shop-title-bg.jpg';
 import ShopCard from '../../Components/ShopCard';
+import Filter from '../../Components/Filter';
 import Pagination from '../../Components/Pagination';
 import products from '../../data/Product';
 import usePagination from '../../hooks/usePagination';
@@ -53,89 +54,7 @@ function Shop() {
             </section>
             <section className={cx('shop-main')}>
                 <div className={cx('filter')}>
-                    <div className={cx('filter-container')}>
-                        <p className={cx('filter-title')}>Filter by category</p>
-                        <ul>
-                            <li className={cx('filter-item')}>
-                                <a className={cx('filter-content')}>
-                                    <span className={cx('filter-circle')}></span>
-                                    Casual shirts
-                                </a>
-                                <p className={cx('filter-quantity')}>12</p>
-                            </li>
-                            <li className={cx('filter-item')}>
-                                <a className={cx('filter-content')}>
-                                    <span className={cx('filter-circle')}></span>
-                                    Casual shirts
-                                </a>
-                                <p className={cx('filter-quantity')}>12</p>
-                            </li>
-                            <li className={cx('filter-item')}>
-                                <a className={cx('filter-content')}>
-                                    <span className={cx('filter-circle')}></span>
-                                    Casual shirts
-                                </a>
-                                <p className={cx('filter-quantity')}>12</p>
-                            </li>
-                            <li className={cx('filter-item')}>
-                                <a className={cx('filter-content')}>
-                                    <span className={cx('filter-circle')}></span>
-                                    Casual shirts
-                                </a>
-                                <p className={cx('filter-quantity')}>12</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className={cx('filter-container')}>
-                        <p className={cx('filter-title')}>Filter by category</p>
-                        <ul>
-                            <li className={cx('filter-item')}>
-                                <a className={cx('filter-content')}>
-                                    <span
-                                        className={cx('filter-circle')}
-                                        style={{ backgroundColor: 'orange', borderColor: 'orange' }}
-                                    ></span>
-                                    Casual shirts
-                                </a>
-                                <p className={cx('filter-quantity')}>12</p>
-                            </li>
-                            <li className={cx('filter-item')}>
-                                <a className={cx('filter-content')}>
-                                    <span className={cx('filter-circle')}></span>
-                                    Casual shirts
-                                </a>
-                                <p className={cx('filter-quantity')}>12</p>
-                            </li>
-                            <li className={cx('filter-item')}>
-                                <a className={cx('filter-content')}>
-                                    <span className={cx('filter-circle')}></span>
-                                    Casual shirts
-                                </a>
-                                <p className={cx('filter-quantity')}>12</p>
-                            </li>
-                            <li className={cx('filter-item')}>
-                                <a className={cx('filter-content')}>
-                                    <span className={cx('filter-circle')}></span>
-                                    Casual shirts
-                                </a>
-                                <p className={cx('filter-quantity')}>12</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className={cx('filter-container')}>
-                        <p className={cx('filter-title')}>Product tags</p>
-                        <ul>
-                            <li className={cx('filter-tag-container')}>
-                                <span className={cx('filter-tag')}>Coats</span>
-                                <span className={cx('filter-tag')}>Cotton</span>
-                                <span className={cx('filter-tag')}>Dresses</span>
-                                <span className={cx('filter-tag')}>Jackets</span>
-                                <span className={cx('filter-tag')}>Jackets</span>
-                                <span className={cx('filter-tag')}>Jackets</span>
-                                <span className={cx('filter-tag')}>Jackets</span>
-                            </li>
-                        </ul>
-                    </div>
+                    <Filter />
                 </div>
                 <div className={cx('shop-content')}>
                     <div className={cx('shop-title')}>

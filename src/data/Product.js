@@ -7,7 +7,7 @@ const products = [
         price: '350.00',
         salePrice: '380.00',
         detail: '',
-        colors: ['Black', 'Blue', 'Brown', 'Green'],
+        colors: ['Black', 'Blue', 'Brown', 'Green', 'Red'],
         sizes: ['S', 'M', 'L'],
         images: {
             mainImg: 'https://hongo.themezaa.com/wp-content/uploads/2019/04/fashion-classic-products-11.jpg.webp',
@@ -668,7 +668,7 @@ const products = [
         id: '39',
         name: 'Leather Shoulder Bag',
         sku: '492488',
-        category: 'Shop metro',
+        category: 'Polo t-shirts',
         price: '1,800.00',
         salePrice: '1,200.00',
         detail: '',

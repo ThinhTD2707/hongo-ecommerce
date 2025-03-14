@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^2.6.1",
     "@types/customize-cra": "^1.0.8",
     "@uidotdev/usehooks": "^2.4.1",
     "classnames": "^2.5.1",
@@ -10,6 +11,7 @@
     "normalize.css": "^3.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0",
     "react-router": "^7.1.1",
     "react-router-dom": "^7.1.1",
     "react-scripts": "5.0.1",
